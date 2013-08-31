@@ -1,11 +1,11 @@
-(defproject bonescript-cljs "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject com.dollfreaks.bonescript "0.1.0-SNAPSHOT"
+  :description "Clojurescript wrappers for the BeagleBone Bonescript library"
+  :url "https://github.com/dollfreaks/bonescript"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/core.async "0.1.0-SNAPSHOT"]
-                 [org.clojure/clojurescript "0.0-1847"]]
+                 [org.clojure/clojurescript "0.0-1859"]]
   
   :repositories {"sonatype" "https://oss.sonatype.org/content/groups/public/"
                  "sonatype-staging" "https://oss.sonatype.org/content/groups/staging/"}
