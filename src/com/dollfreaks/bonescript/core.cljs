@@ -4,7 +4,7 @@
   (:require-macros [cljs.core.async.macros :refer (go)]))
 
 (let [b (cljs.nodejs/require "bonescript")
-      send-message (fn [ch] #(go (apply >! ch %)))]
+      send-message (fn [ch] (fn [& args] (go (>! ch args))))]
 
   (defn get-platform 
     ([] (get-platform (chan 1)))
