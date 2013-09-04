@@ -12,16 +12,10 @@
      (.getPlatform b (send-message ch))
      ch))
 
+  ; gonna need some work to support the "returns a channel" model
   (defn set-pin-mode!
-    ([opts] (set-pin-mode! opts (chan 1)))
-    ([{pin :pin
-       direction :direction
-       mux :mux
-       pullup :pullup
-       slew :slew}
-      ch]
-     (apply #(.pinMode b %) [pin direction mux pullup slew (send-message ch)])
-     ch))
+    [p mode]
+      (.pinMode b p mode))
 
   (defn get-pin-mode
     ([p] (get-pin-mode p (chan 1)))
